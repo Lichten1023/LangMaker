@@ -36,6 +36,16 @@ def MakeNewProjectFolder(Ppath, Pname, Pversion):
     with open(MNPF_rootREADME, 'w') as file:
         file.write(f'# {Pname} {Pversion} | Readme')
 
+    MNPF_rootJSON = os.path.join(MNPF_root, "project.json")   # project.json生成
+    with open(MNPF_rootJSON, 'w') as file:
+        file.write(f'''
+{{
+    "name": "{Pname}",
+    "filename": "project.json",
+    "version": "{Pversion}"
+}}
+                   ''')
+
     MNPF_source = os.path.join(MNPF_root, "src")     # srcフォルダ生成
     os.mkdir(MNPF_source)
 
@@ -86,4 +96,4 @@ def MakeNewProjectFolder(Ppath, Pname, Pversion):
     MNPF_include = os.path.join(MNPF_root, "include")    # docsフォルダ生成
     os.mkdir(MNPF_include)
 
-MakeNewProject()
+# MakeNewProject()

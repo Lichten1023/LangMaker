@@ -1,6 +1,7 @@
-from Module.Settings import Setting
+from Module.Settings import OpenSetting
 from Module.MakeNewProject import MakeNewProject
 from Module.Boot import Boot
+from Module.OpenProject import OpenProject
 
 def main():
     Boot()
@@ -10,10 +11,10 @@ def main():
         c = input(">> ")
         if c == '1':
             MakeNewProject()
-#        elif c == '2':
-#            OpenProject()
+        elif c == '2':
+            OpenProject()
         elif c == '3':
-            Setting.OpenSetting()
+            OpenSetting()
 #        elif c == '4':
 #            Shutdown()
 
