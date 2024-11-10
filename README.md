@@ -1,5 +1,4 @@
 # LangMaker Alpha README
-LangMaker Alpha 公式ドキュメント
 
 ## はじめに
 まだプロジェクトは成立する以前の段階で使用不可能です。
