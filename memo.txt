@@ -1,0 +1,19 @@
+Library/
+- Library.json: 適宜編集
+Library/Calculations/
+- BasicCalculations.py: 実装中
+
+Module/
+- Boot.py: Alpha 実装完了
+
+- LoadLibrary.py: 未実装
+
+- LoadProject.py:
+
+- MakeNewProject.py: Alpha 実装完了
+
+- Settings.py:
+
+- SoftwareName.py: 作業完了
+
+Main.py: 作業中

@@ -1,0 +1,13 @@
+FileName/DirectoryName      |   [Reference]
+----------------------------------------------------------
+- Main.py                   |   [Module.Boot/Boot, Module.MakeNewProject/MakeNewProject]
+Library/                    
+Library/Calculations        
+- BasicCalculations.py      |   []
+Module/                     
+- Boot.py                   |   [Module.SoftwareName/SoftwareInfo, Module.LoadLibrary/LoadLibrary, Module.LoadLibrary/RefreshGrammarDictionaly]
+- LoadLibrary.py            |   []
+- LoadProject.py            |   []
+- MakeNewProject.py         |   []
+- Settings.py               |   []
+- SoftwareName.py           |   []

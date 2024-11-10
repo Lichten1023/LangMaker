@@ -1,0 +1,18 @@
+1. main関数を呼び出す
+1.1. Boot関数を呼び出す
+1.2. 関数内のinputから以下の選択肢をとる。
+     input = 1: 新規プロジェクト。2.へ移動
+     input = 2: プロジェクトを開く。3.へ移動
+     input = 3: 設定を開く。4.へ移動
+     input = 4: LangMakerを終了する。9.へ移動。
+
+2. main関数がMakeNewProject関数を呼び出す
+2.1. MakeNewProject関数がMakeNewProjectFolder関数を呼び出す
+(2.1.1. プロジェクト名が重複している場合はMakeNewProjectFolder関数がもう一度MakeNewProject関数を呼び出して2.1.へ戻る。)
+2.2. MakeNewProject関数がプロジェクトの作成に成功したとき、OpenProject関数に作成したプロジェクトを渡し、Edit関数を呼び出す。3.2.に相当する。
+
+3. main関数がOpenProject関数を呼び出す
+
+4. main関数がOpenSetting関数を呼び出す
+
+9. Shutdown関数を呼び出す
