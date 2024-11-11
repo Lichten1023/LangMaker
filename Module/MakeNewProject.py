@@ -26,6 +26,16 @@ def MakeNewProjectFolder(Ppath, Pname, Pversion):
         print("処理をリセットします。\n")
         MakeNewProject()
 
+    MNPF_projectJSON = os.path.join(MNPF_Project, "Project.json")   # Project.json生成
+    with open(MNPF_projectJSON, 'w') as file:
+        file.write(f'''
+{{
+    "ProjectName": "{Pname}",
+    "filename": "Project.json",
+    "version": ["{Pversion}"]
+}}
+                   ''')
+
     MNPF_root = os.path.join(MNPF_Project, Pversion)  # ルートディレクトリ生成
     os.mkdir(MNPF_root)
     MNPF_rootMAIN = os.path.join(MNPF_root, "main.py")   # main.py生成
@@ -36,11 +46,11 @@ def MakeNewProjectFolder(Ppath, Pname, Pversion):
     with open(MNPF_rootREADME, 'w') as file:
         file.write(f'# {Pname} {Pversion} | Readme')
 
-    MNPF_rootJSON = os.path.join(MNPF_root, "project.json")   # project.json生成
+    MNPF_rootJSON = os.path.join(MNPF_root, "Version.json")   # Version.json生成
     with open(MNPF_rootJSON, 'w') as file:
         file.write(f'''
 {{
-    "name": "{Pname}",
+    "ProjectName": "{Pname}",
     "filename": "project.json",
     "version": "{Pversion}"
 }}
@@ -64,7 +74,7 @@ def MakeNewProjectFolder(Ppath, Pname, Pversion):
     with open(MNPF_sourceJSON, 'w') as file:
         file.write(f'''
 {{
-    "name": "{Pname}",
+    "ProjectName": "{Pname}",
     "filename": "src.json",
     "version": "{Pversion}"
 }}
@@ -77,7 +87,7 @@ def MakeNewProjectFolder(Ppath, Pname, Pversion):
     with open(MNPF_libraryJSON, 'w') as file:
         file.write(f'''
 {{
-    "name": "{Pname}",
+    "ProjectName": "{Pname}",
     "filename": "lib.json",
     "version": "{Pversion}"
 }}
